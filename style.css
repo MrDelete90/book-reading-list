@@ -1,0 +1,157 @@
+:root {
+    --navy: #0b1f3a;
+    --navy-mid: #16365d;
+    --blue: #1e4d8c;
+    --gold: #c9a227;
+    --gold-soft: #f4e6b5;
+    --white: #ffffff;
+    --ivory: #f7f4ec;
+    --text: #10243f;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(165deg, var(--navy) 0%, var(--navy-mid) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px 60px;
+  }
+  
+  h1 {
+    color: var(--white);
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 10px;
+    margin: 0 0 28px;
+  }
+  
+  #app {
+    width: min(680px, 100%);
+    background: var(--white);
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 18px 40px rgba(11, 31, 58, 0.35);
+  }
+  
+  #bookForm {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #bookForm input {
+    flex: 1 1 180px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #d9c98a;
+    border-radius: 8px;
+    background: var(--ivory);
+  }
+  
+  button {
+    cursor: pointer;
+    font: inherit;
+    padding: 10px 16px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    background: var(--blue);
+    color: var(--white);
+    transition: background 0.2s ease, transform 0.1s ease;
+  }
+  
+  button:hover {
+    background: var(--navy);
+    transform: translateY(-1px);
+  }
+  
+  #filters {
+    display: flex;
+    gap: 8px;
+    margin: 18px 0 10px;
+  }
+  
+  .filter-btn {
+    background: var(--ivory);
+    color: var(--navy);
+  }
+  
+  .filter-btn.active {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 600;
+  }
+  
+  #counter {
+    font-weight: 600;
+    color: var(--navy);
+    margin: 10px 0;
+  }
+  
+  #bookList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #bookList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px;
+    background: var(--ivory);
+    border: 1px solid #d9c98a;
+    border-left: 5px solid var(--gold);
+    border-radius: 10px;
+  }
+  
+  #bookList li.read {
+    border-left-color: #2e8b57;
+    opacity: 0.8;
+  }
+  
+  #bookList li.read strong {
+    text-decoration: line-through;
+  }
+  
+  .book-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-info span {
+    font-size: 0.9rem;
+    color: #4a5d78;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .delete-btn {
+    background: #a33a3a;
+    border-color: #a33a3a;
+  }
+  
+  .delete-btn:hover {
+    background: #7d2626;
+  }
+  
+  #emptyMessage {
+    text-align: center;
+    color: #4a5d78;
+  }

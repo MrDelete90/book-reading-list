@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Reading List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Book Reading List</h1>
+
+  <div id="app">
+    <form id="bookForm">
+      <input type="text" id="titleInput" placeholder="Book title" required>
+      <input type="text" id="authorInput" placeholder="Author" required>
+      <button type="submit">Add Book</button>
+    </form>
+
+    <div id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="unread">Unread</button>
+      <button class="filter-btn" data-filter="read">Read</button>
+    </div>
+
+    <p id="counter"></p>
+    <ul id="bookList"></ul>
+    <p id="emptyMessage" hidden>No books to show.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
